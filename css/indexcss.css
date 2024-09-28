@@ -1,0 +1,171 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+/* header */
+.header-grid {
+    display: grid;
+    /* grid-template-rows: repeat(auto,auto); */
+    grid-auto-rows: auto;
+    /* grid-auto-columns: auto; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    background: #F5F6F6;
+    padding-bottom: 5px;
+
+}
+
+.header-grid .collage-name {
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.header-grid .collage-name .logo {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.header-grid .collage-name .logo img {
+    display: block;
+    height: 65px;
+    width: 55px;
+
+}
+
+.header-grid .collage-name p {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+/* search-bar */
+.search-bar {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+/* menubuttons */
+.menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+.menu-button>.btn>a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    width: auto;
+    padding: 10px;
+
+}
+
+
+.nev-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #28196E;
+    height: 50px;
+}
+
+.nev-bar .larger {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.nev-bar .smaller-divice1 {
+    display: none;
+}
+
+
+.nev-bar .smaller-divice1:hover{
+    transition: all;
+    transition-duration: 5ms;
+    /* scale: 50%; */
+    /* background-color: bisque; */
+    color: black;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+/* media query */
+
+/* main */
+.middle{
+    height: 45%;
+    /* background: #28196E; */
+    width: 100%;
+}
+
+
+
+@media screen and (min-width:851px) and (max-width:1100px) {
+    .menu-button {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .search-bar {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .search-bar {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+   .nev-bar .larger {
+        display: none;
+    }
+     .nev-bar .smaller-divice1 {
+        text-align: center;
+        padding-top: 7px;
+        position: absolute;
+        left: 5%;
+        display: block;
+        color: #FFFFFF;
+        font-size: larger;
+        font-weight: bolder;
+        border: 1px solid #FFFFFF;
+        width: 50px;
+        height: 40px;
+        border-radius: 10px;
+     }
+    .collage-name {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+    }
+}
